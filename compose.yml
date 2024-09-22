@@ -1,0 +1,10 @@
+name: cisco
+services:
+  api:
+    build:
+      context: .
+    container_name: ${COMPOSE_PROJECT_NAME}-api
+    environment:
+      - PORT=${PORT}
+    ports:
+      - '${PORT}:${PORT}'
